@@ -8,6 +8,10 @@ grep 'temporary password' /var/log/mysqld.log
 SET PASSWORD = PASSWORD('Abc1234!');
 mysqladmin -uroot -p123456 status   
 
+use mysql
+GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'Abc1234!';
+FLUSH PRIVILEGES;
+
 
 
 show status like 'Threads%';
