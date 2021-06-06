@@ -30,8 +30,15 @@ SHOW INDEX FROM config_info;
 show table status\G
 mysqldump -u root -p --no-data dbname > schema.sql
 mysqld --verbose --help|grep -A 1 'Default options'
+
+
 mysql -uroot -p --default-character-set=utf8mb4
+
+
 mysqldump -uxxx -p --flush-logs --delete-master-logs --single-transaction  --all-databases > alldb.sql
+
+
+
 
 
 
