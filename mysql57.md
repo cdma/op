@@ -5,12 +5,12 @@ yum repolist enabled | grep "mysql.*-community.*"
 yum install mysql-community-server
 systemctl start mysqld
 grep 'temporary password' /var/log/mysqld.log
-SET PASSWORD = PASSWORD('123456')
+SET PASSWORD = PASSWORD('Abc1234!');
 mysqladmin -uroot -p123456 status   
 
 
 
-show status like 'Threads%’;
+show status like 'Threads%';
 select sleep(2);
 GRANT ALL PRIVILEGES ON shop.* TO 'shop'@'%' IDENTIFIED BY '123456';
 GRANT select,insert,update ON db_xtime.* TO 'xtime'@'%' IDENTIFIED BY '123456';
