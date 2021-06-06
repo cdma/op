@@ -6,3 +6,12 @@
 8.142.36.97
 
 
+3. ansible-playbook long.yaml 
+
+4. ansible-playbook api.yaml
+
+
+
+
+
+
