@@ -9,3 +9,21 @@
 5. systemctl enable redis
 
 6. redis-cli ping
+
+
+redis 4.0
+1. https://computingforgeeks.com/how-to-install-latest-redis-on-centos-7/
+
+2. sudo yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+3. sudo yum --enablerepo=remi install redis
+
+4. rpm -qi redis 
+
+5. sudo systemctl enable --now redis
+
+6. sudo systemctl restart redis
+
+7. sudo systemctl status  redis
+
+
