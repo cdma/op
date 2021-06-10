@@ -26,4 +26,6 @@ redis 4.0
 
 7. sudo systemctl status  redis
 
+8. sudo ss -tunelp | grep 6379
+
 
