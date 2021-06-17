@@ -5,10 +5,13 @@
 3. /etc/supervisord.conf
 
 4. systemctl start supervisord.service
+sudo systemctl start supervisor
 
 5. systemctl enable supervisord.service
+sudo systemctl enable supervisor
 
 6. systemctl status supervisord.service
+sudo systemctl status supervisor
 
 7. supervisorctl status
 
