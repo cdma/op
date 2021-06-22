@@ -3,6 +3,8 @@ wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 yum localinstall mysql57-community-release-el7-8.noarch.rpm
 yum repolist enabled | grep "mysql.*-community.*"
 yum install mysql-community-server
+yum install mysql-devel
+
 systemctl start mysqld
 grep 'temporary password' /var/log/mysqld.log
 SET PASSWORD = PASSWORD('Abc1234!');
