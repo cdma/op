@@ -18,11 +18,15 @@ FLUSH PRIVILEGES;
 
 show status like 'Threads%';
 select sleep(2);
+
+SET GLOBAL validate_password_policy=LOW;
+uninstall plugin validate_password;
 GRANT ALL PRIVILEGES ON shop.* TO 'shop'@'%' IDENTIFIED BY '123456';
 GRANT select,insert,update ON db_xtime.* TO 'xtime'@'%' IDENTIFIED BY '123456';
+set password for root@localhost = password('123456');
 flush privileges;
-set password for root@localhost = password(‘123456');
-CREATE DATABASE `db_xtime` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+
 ALTER TABLE user_customer_permission MODIFY id INT NOT NULL;
 ALTER TABLE user_customer_permission DROP PRIMARY KEY;
 show global variables like 'general_log';
@@ -56,8 +60,6 @@ show variables like ‘max_allowed_packet'
 systemctl stop mysqld
 sudo mysqld_safe --skip-grant-tables --skip-networking &
 /usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid --skip-grant-tables --skip-networking --user=root
-Change password
-FLUSH PRIVILEGES;
-SET PASSWORD FOR root@'localhost' = PASSWORD('my_new_password');
+
 ALTER table t_small_video add like_num int(11)  GENERATED ALWAYS as (like_num_recent+like_num_has) VIRTUAL
 
