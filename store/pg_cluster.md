@@ -58,9 +58,14 @@
 13. show create table msg;
 
 14. alter table msg ALTER PRIMARY KEY USING COLUMNS (session_id ASC, msg_id ASC);
+
 DROP INDEX msg@msg_session_id_msg_id_key CASCADE;
+
 DROP INDEX msg@time_idx CASCADE;
+
 CREATE INDEX time_idx ON msg (session_id ASC, gmt_create ASC);
+
+alter table msg_version ALTER COLUMN gmt_create TYPE TIMESTAMP WITH TIME ZONE;
 
 15. cockroach start \
 --insecure \

@@ -10,7 +10,9 @@
 
 6. touch proto/msg_pull_service.proto
 
-7. cargo run --bin msgpull-server
+7. RUST_BACKTRACE=1  cargo run --bin msgpull-server
+
+RUST_BACKTRACE=full  cargo run --bin msgpull-server
 
 8. cargo run --bin msgpull-client
 
