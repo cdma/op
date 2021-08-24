@@ -12,3 +12,10 @@
 
 7. hwclock --systohc
 
+
+8. yum erase java-1.8.0-openjdk java-1.8.0-openjdk-devel
+
+9. yum clean all
+
+10. yum list installed
+
