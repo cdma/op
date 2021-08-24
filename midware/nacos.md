@@ -1,4 +1,4 @@
-tar -xf nacos-server-1.4.1.tar.gz
+tar -xf nacos-server-1.4.2.tar.gz
 
 sh startup.sh -m standalone
 

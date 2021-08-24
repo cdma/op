@@ -63,3 +63,8 @@ sudo mysqld_safe --skip-grant-tables --skip-networking &
 
 ALTER table t_small_video add like_num int(11)  GENERATED ALWAYS as (like_num_recent+like_num_has) VIRTUAL
 
+
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');(重新修改root密码)
+
+　　ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;(不验证有效期)
+
