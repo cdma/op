@@ -25,7 +25,7 @@
   session_id INT64 NOT NULL,
   msg_id INT64 NOT NULL,
   content STRING NOT NULL,
-  migrated BOOL NOT NULL,
+  migrated INT2 NOT NULL,
   gmt_create TIMESTAMP NOT NULL,
   CONSTRAINT msg_pk PRIMARY KEY (session_id ASC, msg_id DESC),
   INDEX time_idx (session_id ASC, gmt_create DESC)
@@ -35,7 +35,7 @@
   session_id INT64 NOT NULL,
   msg_id INT64 NOT NULL,
   content STRING NOT NULL,
-  migrated BOOL NOT NULL,
+  migrated INT2 NOT NULL,
   gmt_create TIMESTAMP NOT NULL,
   CONSTRAINT msg_pk PRIMARY KEY (session_id ASC, msg_id DESC),
   INDEX time_idx (session_id ASC, gmt_create DESC)
@@ -66,6 +66,8 @@ DROP INDEX msg@time_idx CASCADE;
 CREATE INDEX time_idx ON msg (session_id ASC, gmt_create ASC);
 
 alter table msg_version ALTER COLUMN gmt_create TYPE TIMESTAMP WITH TIME ZONE;
+
+alter table msg ALTER COLUMN migrated TYPE INT2;
 
 15. cockroach start \
 --insecure \
