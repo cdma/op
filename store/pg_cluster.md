@@ -67,7 +67,14 @@ CREATE INDEX time_idx ON msg (session_id ASC, gmt_create ASC);
 
 alter table msg_version ALTER COLUMN gmt_create TYPE TIMESTAMP WITH TIME ZONE;
 
-alter table msg ALTER COLUMN migrated TYPE INT2;
+alter table msg ALTER COLUMN migrated SMALLINT;
+
+SET sql_safe_updates = false;
+
+alter table msg DROP COLUMN migrated;
+
+alter table msg ADD COLUMN migrated SMALLINT NOT NULL;
+
 
 15. cockroach start \
 --insecure \
