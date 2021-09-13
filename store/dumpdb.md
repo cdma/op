@@ -5,6 +5,9 @@
 
 3. mysqldump -uroot -p123456 gorm --no-data --set-gtid-purged=OFF > gorm.sql
 
+4. mysqldump -uroot -p123456 --all-databases --set-gtid-purged=OFF > mysql.sql
+
+
 
 
 a. mysqldump -uroot -pAbc1234! babel --set-gtid-purged=OFF > babel.sql
