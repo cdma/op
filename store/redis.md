@@ -29,3 +29,25 @@ redis 4.0
 8. sudo ss -tunelp | grep 6379
 
 
+
+https://hub.fastgit.org/alibaba/TairHash
+
+1. mkdir build_
+
+2. cd build_
+
+3. cmake -DSORT_MODE=yes ../ && make -j
+
+4. https://redis.io/topics/modules-intro
+redis.conf:
+loadmodule /path/to/mymodule.so
+
+dynamic:
+MODULE LIST
+
+MODULE LOAD ../TairHash/lib/tairhash_module.so
+
+
+
+
+
