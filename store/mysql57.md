@@ -50,6 +50,15 @@ mysqldump -uxxx -p --flush-logs --delete-master-logs --single-transaction  --all
 
 
 
+mysql8:
+
+use mysql;
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL ON *.* TO 'username'@'localhost';
+flush privileges;
+
+
+
 
 
 SHOW STATUS WHERE `variable_name` = 'Threads_connected'

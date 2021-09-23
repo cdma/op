@@ -32,13 +32,11 @@ redis 4.0
 
 https://hub.fastgit.org/alibaba/TairHash
 
-1. mkdir build_
+1. mkdir build_ &&  cd build_
 
-2. cd build_
+2. cmake -DSORT_MODE=yes ../ && make -j
 
-3. cmake -DSORT_MODE=yes ../ && make -j
-
-4. https://redis.io/topics/modules-intro
+3. https://redis.io/topics/modules-intro
 redis.conf:
 loadmodule /path/to/mymodule.so
 
