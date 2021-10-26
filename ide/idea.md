@@ -19,3 +19,38 @@ plugin:
 3. IDE Eval Reset
 
 4. https://gitee.com/pengzhile/ide-eval-resetter
+
+
+
+plugins:
+https://www.jianshu.com/p/585b503dd525
+
+Free Mybatis plugin
+
+MyBatis Log Plugin
+
+Alibaba Java Coding Guidelines
+
+Lombok
+
+Key promoter
+
+Gsonformat
+
+
+https://www.jianshu.com/p/736519237b59
+
+MetricsReloaded
+
+Statistic
+
+Maven Helper
+
+Properties to YAML Converter
+
+Stackoverflow
+
+Translation
+
+JUnitGenerator
+

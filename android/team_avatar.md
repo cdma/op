@@ -1,0 +1,6 @@
+tim android:
+TeamHeadSynthesizer
+SynthesizedImageView
+ConversationIconView
+ConversationInfo
+
