@@ -40,13 +40,15 @@ cp etc/dataserver.conf.default etc/dataserver.conf
 ps aux | grep tair
 
 
-3. ./sbin/tairclient -c 127.0.0.1:5198 -g group_test
+3. sbin/tairclient -c 127.0.0.1:5198 -g group_test
 
  put key value
 
  get key
 
  remove key
+
+ delall 0 all
 
  ./tair.sh stop_ds
 

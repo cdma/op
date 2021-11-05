@@ -72,6 +72,8 @@ sh bin/mqadmin updateTopic -c DefaultCluster -t TopicCursorTail -r 1 -w 1
 17. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserRegister -r 1 -w 1
 sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserSocial -r 1 -w 1
 
+sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeamMember -r 1 -w 1
+
 
 //////////
 

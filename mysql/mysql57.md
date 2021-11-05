@@ -1,3 +1,5 @@
+
+install:
 http://dev.mysql.com/downloads/repo/yum/ 
 wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
 yum localinstall mysql57-community-release-el7-8.noarch.rpm
@@ -15,9 +17,16 @@ GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'Abc1234!';
 FLUSH PRIVILEGES;
 
 
+dump:
+mysqldump -uroot -p123456 babel --set-gtid-purged=OFF > babel.sql
 
-show status like 'Threads%';
-select sleep(2);
+mysqldump -uroot -p123456 idgen --set-gtid-purged=OFF > idgen.sql
+
+
+mysqldump -u root -p --no-data dbname > schema.sql
+mysqldump -uxxx -p --flush-logs --delete-master-logs --single-transaction  --all-databases > alldb.sql
+
+
 
 SET GLOBAL validate_password_policy=LOW;
 uninstall plugin validate_password;
@@ -38,34 +47,28 @@ alter table busiid_counter AUTO_INCREMENT=3000000;
 ALTER TABLE busiid_counter ENGINE=InnoDB;
 SHOW INDEX FROM config_info;
 show table status\G
-mysqldump -u root -p --no-data dbname > schema.sql
+
 mysqld --verbose --help|grep -A 1 'Default options'
 
 
 mysql -uroot -p --default-character-set=utf8mb4
 
 
-mysqldump -uxxx -p --flush-logs --delete-master-logs --single-transaction  --all-databases > alldb.sql
 
 
 
 
-mysql8:
 
-use mysql;
-CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
-GRANT ALL ON *.* TO 'username'@'localhost';
-flush privileges;
-
-
-
-
+trace thread:
+show status like 'Threads%';
 
 SHOW STATUS WHERE `variable_name` = 'Threads_connected'
 show variables like '%max_connections%';
 set global validate_password_length=1;
 show variables like ‘max_allowed_packet'
 
+
+lost password:
 systemctl stop mysqld
 sudo mysqld_safe --skip-grant-tables --skip-networking &
 /usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid --skip-grant-tables --skip-networking --user=root
@@ -73,7 +76,13 @@ sudo mysqld_safe --skip-grant-tables --skip-networking &
 ALTER table t_small_video add like_num int(11)  GENERATED ALWAYS as (like_num_recent+like_num_has) VIRTUAL
 
 
+
+password expire:
+
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');(重新修改root密码)
 
 　　ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;(不验证有效期)
+
+update user set password_last_changed=now(), password_expired='N' where user='root';
+flush privileges;
 
