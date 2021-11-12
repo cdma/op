@@ -67,3 +67,6 @@ ps aux | grep tair
 
 
 mvn install:install-file -DgroupId=com.taobao.tair -DartifactId=tair-client -Dversion=2.3.5 -Dpackaging=jar -Dfile=./target/tair-client-2.3.5-sources.jar
+
+
+
