@@ -51,26 +51,26 @@ tail -f ~/logs/rocketmqlogs/broker.log
 9. export NAMESRV_ADDR="127.0.0.1:9876;127.0.0.1:9876"
 
 10. sh bin/mqadmin topicList
-sh bin/mqadmin topicList|grep ^Topic
+    sh bin/mqadmin topicList|grep ^Topic
 
 
 
-11. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicP2P -r 1 -w 1
-sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeam -r 1 -w 1
+11. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgP2P -r 1 -w 1
+    sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgTeam -r 1 -w 1
 
-13. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicP2P0 -r 1 -w 1
-sh bin/mqadmin updateTopic -c DefaultCluster -t TopicP2P1 -r 1 -w 1
+13. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgP2PShard0 -r 1 -w 1
+    sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgP2PShard1 -r 1 -w 1
 
-14. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeam0 -r 1 -w 1
-sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeam1 -r 1 -w 1
+14. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgTeamShard0 -r 1 -w 1
+    sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgTeamShard1 -r 1 -w 1
 
 15. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgBad -r 1 -w 1
 
 16. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicCursorLazy -r 1 -w 1
-sh bin/mqadmin updateTopic -c DefaultCluster -t TopicCursorTail -r 1 -w 1
+    sh bin/mqadmin updateTopic -c DefaultCluster -t TopicCursorTail -r 1 -w 1
 
 17. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserRegister -r 1 -w 1
-sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserSocial -r 1 -w 1
+    sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserSocial -r 1 -w 1
 
 sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeamMember -r 1 -w 1
 

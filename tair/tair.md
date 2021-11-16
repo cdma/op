@@ -32,15 +32,16 @@ cp etc/group.conf.default etc/group.conf
 cp etc/dataserver.conf.default etc/dataserver.conf
 
 
+./tair.sh start_cs
 
 ./tair.sh start_ds
-
-./tair.sh start_cs
 
 ps aux | grep tair
 
 
-3. sbin/tairclient -c 127.0.0.1:5198 -g group_test
+3. verify
+
+ sbin/tairclient -c 127.0.0.1:5198 -g group_test
 
  put key value
 
