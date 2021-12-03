@@ -3,3 +3,7 @@ fetchGroupAvatars
 createGroupAvatar
 
 sd_setImageWithURL
+
+
+nim_ios:
+NIMAvatarImageView
