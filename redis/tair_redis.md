@@ -9,5 +9,7 @@ cmake ../ && make -j
 
 
 redis.conf:
-loadmodule /home/op/soft/cache/TairHash/lib/tairhash_module.so
-loadmodule /home/op/soft/cache/TairString/lib/tairstring_module.so
+loadmodule /opt/redis/tairhash_module.so
+loadmodule /opt/redis/tairstring_module.so
+loadmodule /opt/redis/redisbloom.so
+

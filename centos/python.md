@@ -2,7 +2,11 @@
 
 2. python2.7 get-pip.py
 
-3. yum install gcc
+3. pip install daemonize
+
+
+
+
 
 4. yum install python-devel
 

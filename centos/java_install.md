@@ -8,6 +8,10 @@ JAVA_HOME=/home/op/soft/jdk8u292-b01/jre
 
 export PATH=${JAVA_HOME}/bin:$PATH
 
+export JDK_HOME=/home/op/soft/jdk8u292-b01
+
+export PATH=$JDK_HOME/bin:$PATH
+
 
 
 
