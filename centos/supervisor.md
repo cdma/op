@@ -1,5 +1,7 @@
 1. https://www.cnblogs.com/wxwgk/p/13258401.html
 
+pip install supervisor
+
 2. yum install supervisor
 
 3. /etc/supervisord.conf
