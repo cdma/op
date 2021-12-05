@@ -11,3 +11,9 @@
 alibaba jdk
 https://github.com/alibaba/dragonwell8/releases
 
+tar -xf Alibaba_Dragonwell_8.7.7_x64_linux.tar.gz
+
+JAVA_HOME=/home/op/soft/jdk8u292-b01/jre
+
+export PATH=${JAVA_HOME}/bin:$PATH
+

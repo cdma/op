@@ -31,7 +31,7 @@ source $HOME/.cargo/env
 
 
 
-
+https://stackoverflow.com/questions/52045966/how-to-uninstall-rust-that-was-installed-via-rustup
 
 rustup self uninstall
 
