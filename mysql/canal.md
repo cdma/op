@@ -63,17 +63,25 @@ canal.instance.filter.regex	mysql 数据解析关注的表，Perl正则表达式
 
 
 
+
+SHOW MASTER STATUS;
+
+show slave status;
+
+show slave hosts;
+
+
+
+
+
 mq:
 
 export NAMESRV_ADDR="127.0.0.1:9876;127.0.0.1:9876"
 
-sh bin/mqadmin updateTopic -c DefaultCluster -t babel_msg -r 1 -w 1
+sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgP2PLog -r 1 -w 1
 
-sh bin/mqadmin updateTopic -c DefaultCluster -t babel_msg_version -r 1 -w 1
+sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgTeamLog -r 1 -w 1
 
-sh bin/mqadmin updateTopic -c DefaultCluster -t babel_team_msg -r 1 -w 1
-
-sh bin/mqadmin updateTopic -c DefaultCluster -t babel_team_msg_version -r 1 -w 1
 
 
 
