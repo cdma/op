@@ -75,6 +75,9 @@ tail -f ~/logs/rocketmqlogs/broker.log
 sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeamMember -r 1 -w 1
 
 
+
+
+
 //////////
 
 18. sh bin/mqshutdown broker
