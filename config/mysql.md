@@ -1,0 +1,1 @@
+ALTER TABLE `msg` CHANGE COLUMN `content` `body_id` bigint(2048) NOT NULL;
