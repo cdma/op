@@ -35,7 +35,6 @@ rustup component add rustfmt
 
 
 
-
 https://stackoverflow.com/questions/52045966/how-to-uninstall-rust-that-was-installed-via-rustup
 
 rustup self uninstall
@@ -44,7 +43,3 @@ rustup self uninstall
 
 
 
-bad cross build:
-1. rustup target add x86_64-unknown-linux-gnu
-
-2. cargo build --target x86_64-unknown-linux-gnu
