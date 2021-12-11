@@ -13,6 +13,7 @@ export JDK_HOME=/home/op/soft/jdk8u292-b01
 export PATH=$JDK_HOME/bin:$PATH
 
 
+yum install fontconfig
 
 
 
