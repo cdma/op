@@ -66,10 +66,8 @@ tail -f ~/logs/rocketmqlogs/broker.log
 
 15. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicMsgBad -r 1 -w 1
 
-16. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicCursorLazy -r 1 -w 1
-    sh bin/mqadmin updateTopic -c DefaultCluster -t TopicCursorTail -r 1 -w 1
 
-17. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserRegister -r 1 -w 1
+16. sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserRegister -r 1 -w 1
     sh bin/mqadmin updateTopic -c DefaultCluster -t TopicUserSocial -r 1 -w 1
 
 sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeamMember -r 1 -w 1
