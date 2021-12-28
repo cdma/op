@@ -31,6 +31,7 @@ CATALINA_OPTS="$CATALINA_OPTS -server -Djava.awt.headless=true
 -XX:SoftRefLRUPolicyMSPerMB=0 # 软引用对象多久被回收，默认为1秒
  
 -Djava.nio.channels.spi.SelectorProvider=sun.nio.ch.EPollSelectorProvider -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djava.util.logging.config.file="%CATALINA_HOME%\conf\logging.properties" -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintGCApplicationConcurrentTime -XX:+PrintHeapAtGC -Xloggc:/data/applogs/heap_trace.txt -XX:-HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/data/applogs/HeapDumpOnOutOfMemoryError"
+
 jdk8
 jdk8/bin/java -server -Xms2g -Xmx2g -Xmn1g -XX:MaxMetaspaceSize=512m -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=70 -XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -XX:-OmitStackTraceInFastThrow -XX:+PrintGCDateStamps -verbose:gc -XX:+PrintGCDetails -Xloggc:/home/admin/service_gc_20170920102322.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=
 jd:
@@ -85,6 +86,7 @@ Code Cache (non-heap):HotSpot Java虚拟机包括一个用于编译和保存本�
 jcmd pid VM.flags
 top
 e 内存单位切换
+
 对于长连接，push一类的海量服务端应用，16G内存8核心，推荐的JVM参数如下
 2017.06.28更新
 jdk 1.7 14g->13g

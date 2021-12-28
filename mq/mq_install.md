@@ -92,6 +92,10 @@ sh bin/mqadmin updateTopic -c DefaultCluster -t TopicTeamMember -r 1 -w 1
 
 24. sh bin/mqadmin getBrokerConfig -b localhost:10911
 
+sh bin/mqadmin topicStatus -t TopicMsgP2P
+
+
+
 
 
 
