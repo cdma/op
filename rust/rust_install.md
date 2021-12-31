@@ -30,6 +30,7 @@ source $HOME/.cargo/env
 6. rustc --version
 
 rustup component add clippy
+
 rustup component add rustfmt
 
 
