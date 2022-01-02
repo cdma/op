@@ -19,3 +19,19 @@
 
 10. yum list installed
 
+
+
+
+
+systemctl stop firewalld.service
+
+ systemctl disable firewalld
+
+
+
+ setenforce 0
+
+ /etc/selinux/config
+
+
+
