@@ -79,7 +79,8 @@ ALTER table t_small_video add like_num int(11)  GENERATED ALWAYS as (like_num_re
 
 password expire:
 
-SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');(重新修改root密码)
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('Abcdef1234567!');
+SET PASSWORD FOR 'root'@'%' = PASSWORD('Abcdef1234567!');
 
 　　ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;(不验证有效期)
 
