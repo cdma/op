@@ -27,7 +27,8 @@ filebeat.inputs:
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
     # - /var/log/*.log
-    /home/op/logs/babel/api/babel_api.log
+    # /home/op/logs/babel/api/babel_api.log
+    - /home/op/logs/babel/push/babel_push.log
     #- c:\programdata\elasticsearch\logs\*
 
   # Exclude lines. A list of regular expressions to match. It drops the lines that are
@@ -40,15 +41,15 @@ filebeat.inputs:
 
   # Exclude files. A list of regular expressions to match. Filebeat drops the files that
   # are matching any regular expression from the list. By default, no files are dropped.
-  #exclude_files: ['.gz$']
+  exclude_files: ['.gz$']
 
   # Optional additional fields. These fields can be freely picked
   # to add additional information to the crawled log files for filtering
   fields:
   #  level: debug
   #  review: 1
-    log_topic: apilog 
-    type: api_log
+    log_topic: pushlog 
+    type: push_log
 
   ### Multiline options
 

@@ -1,0 +1,24 @@
+input {
+  kafka {
+    topics => ["apilog", "pushlog"]
+    bootstrap_servers => "localhost:9092"
+    decorate_events => true
+    group_id => "logstash-babel-topic-consumers"
+    consumer_threads => 2 
+  }
+}
+
+output {
+   if [kafka][topic] == "apilog" {
+      elasticsearch {
+            hosts => "localhost:9200"
+            index => "apilog-%{+YYYY.MM.dd}"
+      }
+   }
+   else if [kafka][topic] == "pushlog" {
+      elasticsearch {
+            hosts => "localhost:9200"
+            index => "pushlog-%{+YYYY.MM.dd}"
+      }
+    }
+}
