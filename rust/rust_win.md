@@ -45,8 +45,15 @@ linker = "C:\\msys64\\mingw64\\bin\\gcc.exe"
 ar = "C:\\msys64\\mingw64\\bin\\ar.exe"
 
 
+https://zhuanlan.zhihu.com/p/382810160
+
+rustup default
+rustup toolchain install nightly
+rustup run nightly rustc --version
+rustup default nightly
 
 
+rustup toolchain uninstall nightly
 
 
 rustup self uninstall
