@@ -47,6 +47,7 @@ ar = "C:\\msys64\\mingw64\\bin\\ar.exe"
 
 https://zhuanlan.zhihu.com/p/382810160
 
+rustup toolchain list
 rustup default
 rustup toolchain install nightly
 rustup run nightly rustc --version
