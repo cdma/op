@@ -41,6 +41,9 @@ https://stackoverflow.com/questions/52045966/how-to-uninstall-rust-that-was-inst
 rustup self uninstall
 
 
+cargo install cargo-cache
+
+cargo-cache trim --limit 200M
 
 
 

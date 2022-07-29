@@ -13,7 +13,7 @@ SET PASSWORD = PASSWORD('Abc1234!');
 mysqladmin -uroot -p123456 status   
 
 use mysql
-GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'Abc1234!';
+GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'Abcdef1234567!';
 FLUSH PRIVILEGES;
 
 
