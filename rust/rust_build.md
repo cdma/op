@@ -1,6 +1,6 @@
 https://github.com/hyperium/tonic/blob/master/examples/helloworld-tutorial.md
 
-cargo build --bin relation-server --release 
+cargo build --bin relation-server --release  --target x86_64-pc-windows-gnu
 
 cargo build --bin msg_cli --release
 

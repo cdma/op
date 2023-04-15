@@ -1,0 +1,12 @@
+https://docs.portainer.io/start/install/server/docker/linux
+
+docker volume create portainer_data
+
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
+docker ps
+
+https://192.168.0.106:9443
+
+admin
+123456789012345

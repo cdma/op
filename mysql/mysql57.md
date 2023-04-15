@@ -13,7 +13,7 @@ SET PASSWORD = PASSWORD('Abc1234!');
 mysqladmin -uroot -p123456 status   
 
 use mysql
-GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'Abc1234!';
+GRANT ALL ON *.* to root@'%' IDENTIFIED BY 'Abcdef1234567!';
 FLUSH PRIVILEGES;
 
 
@@ -79,7 +79,8 @@ ALTER table t_small_video add like_num int(11)  GENERATED ALWAYS as (like_num_re
 
 password expire:
 
-SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');(重新修改root密码)
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('Abcdef1234567!');
+SET PASSWORD FOR 'root'@'%' = PASSWORD('Abcdef1234567!');
 
 　　ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;(不验证有效期)
 
