@@ -1,0 +1,16 @@
+https://expressjs.com/en/starter/installing.html
+
+npm init
+
+npm install express
+
+
+jest
+https://juejin.cn/post/6844903489030586376
+
+npm install -g jest
+
+npm test
+
+
+
