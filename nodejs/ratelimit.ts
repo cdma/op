@@ -6,19 +6,19 @@ class BurstRateLimiter
     private storedPermits:number;
     private maxPermits:number;
     private stableIntervalMillis:number;
-    public  init(permitsPerSecond:number)
+    public  constructor(permitsPerSecond:number)
     {
-        this.startTime = System.currentTimeMillis();
+        this.startTime = Date.now();
         this.stableIntervalMillis = this.seconds2Millis(1) / permitsPerSecond;
         this.storedPermits = 0.0;
         this.maxPermits = this.maxBurstSeconds * permitsPerSecond;
         this.syncState(this.currentMillis());
     }
-    private number seconds2Millis(duration:number)
+    private  seconds2Millis(duration:number): number
     {
         return duration * 1000;
     }
-    public boolean tryAcquire(permits:number)
+    public  tryAcquire(permits:number): boolean
     {
         var nowMillis = this.currentMillis();
         if (!this.canAcquire(nowMillis))
@@ -31,21 +31,21 @@ class BurstRateLimiter
         }
         return true;
     }
-    private number currentMillis()
+    private  currentMillis(): number
     {
-        return System.currentTimeMillis() - this.startTime;
+        return Date.now() - this.startTime;
     }
-    private boolean canAcquire(nowMillis:number)
+    private  canAcquire(nowMillis:number):boolean
     {
         return this.nextFreeTicketMillis <= nowMillis;
     }
-    public number reserveEarliestAvailable(requiredPermits:number, nowMillis:number)
+    public  reserveEarliestAvailable(requiredPermits:number, nowMillis:number): number
     {
         this.syncState(nowMillis);
         var momentAvailable = this.nextFreeTicketMillis;
         var storedPermitsToSpend = Math.min(requiredPermits,this.storedPermits);
         var freshPermits = requiredPermits - storedPermitsToSpend;
-        var waitMillis = parseInt((freshPermits * this.stableIntervalMillis));
+        var waitMillis = freshPermits * this.stableIntervalMillis;
         this.nextFreeTicketMillis = this.nextFreeTicketMillis + waitMillis;
         console.log("reserveEarliestAvailable nextFreeTicketMillis: " + (momentAvailable) / 1000 + ", nextFreeTicketMillis: " + (this.nextFreeTicketMillis) / 1000 + ", nowMillis: " + (nowMillis) / 1000 + ", storedPermits: " + this.storedPermits + ", waitMillis: " + (waitMillis) / 1000);
         this.storedPermits -= storedPermitsToSpend;
@@ -62,3 +62,8 @@ class BurstRateLimiter
         }
     }
 }
+
+let limiter = new BurstRateLimiter(1);
+console.log(limiter.tryAcquire(1))
+console.log(limiter.tryAcquire(1))
+
