@@ -1,64 +1,64 @@
-class BurstyRateLimiter
+class BurstRateLimiter
 {
     private maxBurstSeconds:number = 1.0;
-    private nextFreeTicketMicros:number = -1;
+    private nextFreeTicketMillis:number = -1;
     private startTime:number;
     private storedPermits:number;
     private maxPermits:number;
-    private stableIntervalMicros:number;
+    private stableIntervalMillis:number;
     public  init(permitsPerSecond:number)
     {
-        this.startTime = System.currentTimeMillis() * 1000;
-        this.stableIntervalMicros = this.seconds2Micros(1) / permitsPerSecond;
+        this.startTime = System.currentTimeMillis();
+        this.stableIntervalMillis = this.seconds2Millis(1) / permitsPerSecond;
         this.storedPermits = 0.0;
         this.maxPermits = this.maxBurstSeconds * permitsPerSecond;
-        this.syncState(this.currentMicros());
+        this.syncState(this.currentMillis());
     }
-    private number seconds2Micros(duration:number)
+    private number seconds2Millis(duration:number)
     {
-        return duration * 1000 * 1000;
+        return duration * 1000;
     }
     public boolean tryAcquire(permits:number)
     {
-        var nowMicros = this.currentMicros();
-        if (!this.canAcquire(nowMicros))
+        var nowMillis = this.currentMillis();
+        if (!this.canAcquire(nowMillis))
         {
             return false;
         }
         else
         {
-            this.reserveEarliestAvailable(permits, nowMicros);
+            this.reserveEarliestAvailable(permits, nowMillis);
         }
         return true;
     }
-    private number currentMicros()
+    private number currentMillis()
     {
-        return System.currentTimeMillis() * 1000 - this.startTime;
+        return System.currentTimeMillis() - this.startTime;
     }
-    private boolean canAcquire(nowMicros:number)
+    private boolean canAcquire(nowMillis:number)
     {
-        return this.nextFreeTicketMicros <= nowMicros;
+        return this.nextFreeTicketMillis <= nowMillis;
     }
-    public number reserveEarliestAvailable(requiredPermits:number, nowMicros:number)
+    public number reserveEarliestAvailable(requiredPermits:number, nowMillis:number)
     {
-        this.syncState(nowMicros);
-        var momentAvailable = this.nextFreeTicketMicros;
+        this.syncState(nowMillis);
+        var momentAvailable = this.nextFreeTicketMillis;
         var storedPermitsToSpend = Math.min(requiredPermits,this.storedPermits);
         var freshPermits = requiredPermits - storedPermitsToSpend;
-        var waitMicros = parseInt((freshPermits * this.stableIntervalMicros));
-        this.nextFreeTicketMicros = this.nextFreeTicketMicros + waitMicros;
-        console.log("reserveEarliestAvailable nextFreeTicketMicros: " + (momentAvailable) / 1000 + ", nextFreeTicketMicros: " + (this.nextFreeTicketMicros) / 1000 + ", nowMicros: " + (nowMicros) / 1000 + ", storedPermits: " + this.storedPermits + ", waitMicros: " + (waitMicros) / 1000);
+        var waitMillis = parseInt((freshPermits * this.stableIntervalMillis));
+        this.nextFreeTicketMillis = this.nextFreeTicketMillis + waitMillis;
+        console.log("reserveEarliestAvailable nextFreeTicketMillis: " + (momentAvailable) / 1000 + ", nextFreeTicketMillis: " + (this.nextFreeTicketMillis) / 1000 + ", nowMillis: " + (nowMillis) / 1000 + ", storedPermits: " + this.storedPermits + ", waitMillis: " + (waitMillis) / 1000);
         this.storedPermits -= storedPermitsToSpend;
-        return Math.max(momentAvailable - nowMicros,0);
+        return Math.max(momentAvailable - nowMillis,0);
     }
-    public  syncState(nowMicros:number)
+    public  syncState(nowMillis:number)
     {
-        if (nowMicros > this.nextFreeTicketMicros)
+        if (nowMillis > this.nextFreeTicketMillis)
         {
-            var newPermits = (nowMicros - this.nextFreeTicketMicros) / this.stableIntervalMicros;
-            console.log("syncState nextFreeTicketMicros: " + (this.nextFreeTicketMicros) / 1000 + ", nowMicros: " + (nowMicros) / 1000 + ", storedPermits: " + this.storedPermits + ", newPermits: " + newPermits);
+            var newPermits = (nowMillis - this.nextFreeTicketMillis) / this.stableIntervalMillis;
+            console.log("syncState nextFreeTicketMillis: " + (this.nextFreeTicketMillis) / 1000 + ", nowMillis: " + (nowMillis) / 1000 + ", storedPermits: " + this.storedPermits + ", newPermits: " + newPermits);
             this.storedPermits = Math.min(this.maxPermits,this.storedPermits + newPermits);
-            this.nextFreeTicketMicros = nowMicros;
+            this.nextFreeTicketMillis = nowMillis;
         }
     }
 }
