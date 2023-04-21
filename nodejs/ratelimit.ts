@@ -1,25 +1,16 @@
-class RateLimiter
+class BurstyRateLimiter
 {
-    private nextFreeTicketMicros:number = 0;
+    private maxBurstSeconds:number = 1.0;
+    private nextFreeTicketMicros:number = -1;
     private startTime:number;
     private storedPermits:number;
     private maxPermits:number;
     private stableIntervalMicros:number;
-    private maxBurstSeconds:number;
-    constructor()
-    {
-        this.maxBurstSeconds = 1.0;
-    }
     public  init(permitsPerSecond:number)
     {
         this.startTime = System.currentTimeMillis() * 1000;
-        this.setRate(permitsPerSecond);
-    }
-    public  setRate(permitsPerSecond:number)
-    {
-        var stableIntervalMicros = this.seconds2Micros(1) / permitsPerSecond;
-        this.stableIntervalMicros = stableIntervalMicros;
-        this.storedPermits = permitsPerSecond;
+        this.stableIntervalMicros = this.seconds2Micros(1) / permitsPerSecond;
+        this.storedPermits = 0.0;
         this.maxPermits = this.maxBurstSeconds * permitsPerSecond;
         this.syncState(this.currentMicros());
     }
@@ -56,6 +47,7 @@ class RateLimiter
         var freshPermits = requiredPermits - storedPermitsToSpend;
         var waitMicros = parseInt((freshPermits * this.stableIntervalMicros));
         this.nextFreeTicketMicros = this.nextFreeTicketMicros + waitMicros;
+        console.log("reserveEarliestAvailable nextFreeTicketMicros: " + (momentAvailable) / 1000 + ", nextFreeTicketMicros: " + (this.nextFreeTicketMicros) / 1000 + ", nowMicros: " + (nowMicros) / 1000 + ", storedPermits: " + this.storedPermits + ", waitMicros: " + (waitMicros) / 1000);
         this.storedPermits -= storedPermitsToSpend;
         return Math.max(momentAvailable - nowMicros,0);
     }
@@ -64,6 +56,7 @@ class RateLimiter
         if (nowMicros > this.nextFreeTicketMicros)
         {
             var newPermits = (nowMicros - this.nextFreeTicketMicros) / this.stableIntervalMicros;
+            console.log("syncState nextFreeTicketMicros: " + (this.nextFreeTicketMicros) / 1000 + ", nowMicros: " + (nowMicros) / 1000 + ", storedPermits: " + this.storedPermits + ", newPermits: " + newPermits);
             this.storedPermits = Math.min(this.maxPermits,this.storedPermits + newPermits);
             this.nextFreeTicketMicros = nowMicros;
         }
