@@ -33,7 +33,7 @@ export class BurstRateLimiter {
     
     // take permit
     public  tryAcquire(permits: number): boolean {
-        var nowMillis = this.currentMillis();
+        let nowMillis = this.currentMillis();
         if (!this.canAcquire(nowMillis))
         {
             return false;
@@ -53,10 +53,10 @@ export class BurstRateLimiter {
     // can borrow permit at first, but wait full time next
     private  reserveEarliestAvailable(requiredPermits:number, nowMillis:number): number {
         this.syncState(nowMillis);
-        let momentAvailable = this.nextFreeTicketMillis;
-        let storedPermitsToSpend = Math.min(requiredPermits, this.storedPermits);
-        let freshPermits = requiredPermits - storedPermitsToSpend;
-        let waitMillis = freshPermits * this.stableIntervalMillis;
+        const momentAvailable = this.nextFreeTicketMillis;
+        const storedPermitsToSpend = Math.min(requiredPermits, this.storedPermits);
+        const freshPermits = requiredPermits - storedPermitsToSpend;
+        const waitMillis = freshPermits * this.stableIntervalMillis;
         this.nextFreeTicketMillis = this.nextFreeTicketMillis + waitMillis;
         this.storedPermits -= storedPermitsToSpend;
         return Math.max(momentAvailable - nowMillis, 0);
@@ -64,7 +64,7 @@ export class BurstRateLimiter {
 
     private  syncState(nowMillis:number) {
         if (nowMillis > this.nextFreeTicketMillis) {
-            var newPermits = (nowMillis - this.nextFreeTicketMillis) / this.stableIntervalMillis;
+            const newPermits = (nowMillis - this.nextFreeTicketMillis) / this.stableIntervalMillis;
             this.storedPermits = Math.min(this.maxPermits,this.storedPermits + newPermits);
             this.nextFreeTicketMillis = nowMillis;
         }
@@ -90,11 +90,14 @@ const limiter = new BurstRateLimiter(permitsPerSecond);
 export default function (req: NextApiRequest, res: NextApiResponse) {
   const pass = limiter.tryAcquire(1);
   if (pass) {
-    return verifyAddress(req, res);
+     verifyAddress(req, res);
   } else {
-    res.status(503).send('request too many');
+    return res.status(503).send('request too many');
   }
 }
+
+
+
 
 
 
@@ -135,5 +138,4 @@ describe('BurstRateLimiter', () => {
 
   
   });
-  
   
