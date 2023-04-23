@@ -9,6 +9,7 @@ jest
 https://juejin.cn/post/6844903489030586376
 
 npm install -g jest
+npm install jest
 
 npm test
 
