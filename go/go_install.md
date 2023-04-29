@@ -1,5 +1,7 @@
 1.  https://studygolang.com/dl
 
+https://go.dev/dl/
+
 2.  https://goproxy.cn/
 
 go env -w GO111MODULE=on
@@ -25,3 +27,9 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 
 go clean -modcache
+
+
+/usr/local/go
+
+go/src/runtime/internal/sys/zversion.go
+const theVersion = `go1.20.3`

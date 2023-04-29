@@ -1,0 +1,35 @@
+npx create-next-app
+
+npx create-react-app react-demo
+
+
+
+npm install react@17.0.2 react-dom@17.0.2
+
+
+
+max and CfGg444t
+
+
+
+
+
+
+
+
+
+
+
+
+var s = document.createElement("script");
+s.src = "http://cdn.bootcss.com/jquery/2.2.0/jquery.js";
+document.body.append(s);
+
+
+
+npm i @stomp/stompjs --save
+npm i sockjs-client --save
+npm install sockjs-client --save
+
+
+
