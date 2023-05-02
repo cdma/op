@@ -1,0 +1,78 @@
+Backend-Developer for various applications
+Back-End Development
+Posted 3 days ago
+Worldwide
+WHAT YOU SHOULD BRING WITH YOU:
+- Good knowledge of Golang and GraphQL
+- Experience with PostgreSQL or other SQL databases
+- Knowledge of OAuth2
+- Experience with SCRUM, Git and GitHub or similar.
+
+YOUR TASKS / AREAS OF ACTIVITY:
+- Development of backend components with Golang, GQLGen, GORM
+- Work with PostgreSQL databases
+- Implementation of database migration scripts
+- Agile development with SCRUM
+
+Dikurium's backend components use Golang for the implementation, due to its performance and advantages in concurrency applications. Some other libraries are also used, and this backend challenge serves as a way to test candidates on their skills in creating a web API using the stack.
+
+If you fit the profile, please send us your application via E-Mail at info@dikurium.ch. Please add to your application the solution for the following test:
+
+SETUP
+Create a new Go module and set it up for a web API. Follow Go projects conventions using Go 1.18 or later, and configure Viper for configuration management, GORM with Postgres, and Zap for structured logging. You can use uber/fx for dependency management.
+
+Also setup GQLGen to implement a GraphQL API. You can use Chi for routing, or the built-in Go HTTP handler.
+
+Alternatively, clone the go-gqlgen-fx-template (https://dan6erbond.github.io/go-gqlgen-fx-template/) and modify it to fit the requirements.
+
+TASK
+Implement an authenticated GraphQL API that allows users to track todos. The schema should include the mutations and queries as shown in the attached picture.
+
+Authenticated access should be handled with the Authorization header and Bearer tokens. You can use the golang-jwt/jwt (https://pkg.go.dev/github.com/golang-jwt/jwt) package to generate tokens. If the user isn’t authenticated, the API should return a 401 using middleware/directives.
+
+Your GraphQL schema should implement nested types and field resolvers or preloads to fetch them from the DB. This should work recursively.
+
+ADDITIONAL IMPROVEMENTS (increase your chances against other candidates)
+- Use the dataloader pattern to optimize N+1 queries.
+- Use field collection to preload relationships & avoid N+1 altogether.
+- Implement UUID with a custom scalar for todos.
+- Add E2E tests with Ginkgo and Gomega.
+- Use gorm/gen to generate typesafe repositories (https://gorm.io/gen/).
+
+Commit your code to a VCS provider of your choice (GitHub, GitLab, Bitbucket, etc.) and share the link with us once completed. If you want to deploy the app, feel free to share the deployment link as well (see additional improvements).
+
+Note that communication is only accepted via the before-mentioned e-mail. The E-Mail should contain the phrase blue elephant in white house.
+
+Good luck!
+More than 30 hrs/week
+Hourly
+More than 6 months
+Project Length
+Intermediate
+I am looking for a mix of experience and value
+$15.00-$25.00
+Hourly
+Contract-to-hire
+This job has the potential to turn into a full time role
+Attachment
+ Backend Callenge.JPG (8 KB)
+Project Type:  Ongoing project
+You will be asked to answer the following questions when submitting a proposal:
+
+Include a link to your GitHub profile and/or website
+Skills and Expertise
+Back-End Programming Languages
+Golang SQL GraphQL
+Databases
+PostgreSQL
+Other
+OAuth2
+
+
+
+https://upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com/opening-attachments/4028caa20261fc8ea28dd4a2a353c0e0?response-content-disposition=inline;+filename=%22Backend%2520Callenge.JPG%22;+filename*=utf-8%27%27Backend%2520Callenge.JPG&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKj//////////wEaCXVzLXdlc3QtMiJIMEYCIQCHAJVh6Ps6pk6LTWUoh1b7/a674hgkJQy0DxyEDIGC/AIhAKNiGrwqRzA8NHVjk/Y/8XfVqRRIcULopEbodd%2BPkIx7KtYECLH//////////wEQABoMNzM5OTM5MTczODE5IgxueAA92%2BctVfj48AsqqgS7h87wrH6OFUMOR0PtWy2RPqhNbKTmlTv68kVQTKiNpc/FcToXr4h9OQUkttuDzibnvCwLOtZBwNo%2BUWyNMhL/uTGWSlAsrwjcvnIgfLpijnEdt6wQ2OtF%2BGcc0wdf1TrJP6EPpdwYmfVWTh8nFNMY79HZ6b2rCfoZ4Le6cAZGPVBR%2Boyui/zUCEajZa7l09MQNXeTY3XnHPdIUuxKQ9i3VUZmXIRzwQ8yOm9tee/%2BriVhd1za/XTc2POdekXSm%2BLtwqH5jHnSvpNEjXdcEX6HcuUtMTdnoV9mE7kFDjcjC5VuAo/Bj%2BnmrZ3yR0lDKx91Z6N3VwlU6LN5iUL7OI1zkwPPHHSnQfPEaoTSSqWK2tQ6S8xCdgnxEMrBHZ6DKbwuxy0sLCTHXOyb0s2Dk2pbqfDAEY/MrLjkrDYGR9LzDl5dZ2MHAyxXI6LHIMiP1wMiQmxqE037EPzxzxk4mFndflmnInrfA5YHtquR%2BK/X8tv0SDu73LYNmzRLCA1ATets92%2BVCAUAtPGOC527CvbpwcZM3NuxglU2Jg9FLSZaaUTWNBmHa0477DTLLXodxLvi4tFEGelc1fK%2BTZ1h%2BBr7S1bDHgYnG2zBISMEngYwJveG7NYW/wWPIKe%2BaLoiD8a8w6LVhbGY7C3Be82eXIkVMqPHF6ORK8YeGrgTAEoC1LgHdBa8zu0l9gTz6XbpJYUYt4OpWoiGgLVnE4LnebG4Vs6YDM9mR3I1KDCmpcGiBjqmAUfXT23/YsOmlf6Vb4a6kvdpVjITHbPbMOzappJvbCSuwzbfnFNblW3ATlbRgjF%2BGgT4KlI/eD9n0SzhojFCqwl%2BQWfQ8QoZ3VpuTk1Fynrr%2BcTgLynFyrqedU6eLeZ8DxaJ0Meq7QE0c8/eCrwpZw0FRI137GGivR6QpLWSTiYSJmItCV1u1B4pl4DoKES%2BkkUQVT9ue5nYkFcZYoZftxKjBacIr7k=&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20230502T005656Z&X-Amz-SignedHeaders=host&X-Amz-Expires=21599&X-Amz-Credential=ASIA2YR6PYW5VC5HGXMB/20230502/us-west-2/s3/aws4_request&X-Amz-Signature=b7e113d690f0b07f236efd7e91b7e4b0d3b55f28bd7be2c6e659472b26ee5692
+
+
+
+
+type Query 
