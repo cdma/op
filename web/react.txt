@@ -1,14 +1,23 @@
+https://react.dev/learn/start-a-new-react-project
+
+
 npx create-next-app
 
-npx create-react-app react-demo
+ npm install create-react-app
+
+npm create-react-app react-demo
+
+npx create-react-app@17.02 react17-demo
+
+npx create-react-app react-ts-chat-demo --template typescript
 
 
+npm install react@17.0.2 react-dom@17.0.2 
 
-npm install react@17.0.2 react-dom@17.0.2
+npm uninstall react react-dom
 
+npm install react@17.0.2 react-dom@17.0.2  --save --legacy-peer-deps
 
-
-max and CfGg444t
 
 
 
@@ -31,5 +40,16 @@ npm i @stomp/stompjs --save
 npm i sockjs-client --save
 npm install sockjs-client --save
 
+
+https://github.com/ZhangMYihua/crwn-clothing-v2
+
+https://github.com/coderwhy/hy-react-airbnb
+
+https://github.com/coderwhy/hy-react-web-music
+
+
+
+
+https://github.com/mschwarzmueller/nextjs-course-code
 
 
