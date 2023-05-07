@@ -1,35 +1,4 @@
-weakmaster@gmail.com
-wiss
-
-
-AlexanderBob@qq.com   
-mike
-
-3440229287@qq.com
-moon
-
-
-AlexanderCdma@163.com
-cdma
-
-mikealexander@163.com
-sunshine
-
-
-moonalexander@163.com
-spirit
-
-
-windalexander@163.com
-wind
-
-
-soulalexander@163.com
-soul
-
-
-ZingAlexander@163.com
-zing
+monetalexander
 
 
 
@@ -47,4 +16,59 @@ I am a seasoned Java backend developer,  I once developed a game.  I think I am 
 
 
 
-I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS 3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，Typescript，Java，Golang and Python. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
+I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，Typescript，Java，Golang and PHP. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
+
+
+
+
+
+Blockchain Data Browser (https://browser.chinacsci.com) is used to browse the
+business data of various parties that have been uploaded to the blockchain.
+
+* Using Next.js as the view render framework, TypeScript as a development
+language
+
+* Using Nest.js as backend business logic implementation, Mysql as the
+business database
+
+* Using Redux as the business data state management tool
+
+* Using Ant Design as the UI component library
+
+
+
+Blockchain Management Platform (http://foxcon-console.devn.chinacsci.com) is a
+blockchain management platform with multi-user roles.
+
+* Using Next.js as the backend business logic implementation and view
+rendering framework, TypeScript as the development language, and
+MongoDB as the business database
+
+* Using Redux as the business data state management tool and styledcomponents
+as the styling tool
+
+* Using Ant Design as the UI component library
+
+
+
+
+
+
+
+* Youqiantu App , a practical app focused on school selection
+information and including community functions. The app was a hybrid app,
+with the native part initially implemented using the native frameworks and
+languages of each platform (Android, iOS). I was responsible for the main
+development of the H5 part. The technical architecture of the H5 part
+included: using React as the view framework and implementing a complete
+backend rendering function that meets the needs of its own business
+requirements to accelerate the rendering of the first screen; using Redux as the
+data state management tool and CSS Modules as the primary styling tool.
+
+
+* Youqiantu official website, aimed at guiding users to download
+the Youqiantu app and implementing some of the app's features. Technically, it
+was also based on a React framework, with the addition of firstscreen
+backend rendering functionality to optimize SEO.
+
+

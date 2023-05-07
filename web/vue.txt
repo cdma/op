@@ -6,3 +6,16 @@ https://github.com/coderwhy/supermall
 
 https://github.com/2002XiaoYu/-Mobile-rental-project
 
+
+
+
+https://cn.vuejs.org/guide/quick-start.html#creating-a-vue-application
+
+npm init vue@latest
+
+npm install
+
+npm run dev
+
+npm run build
+

@@ -1,0 +1,10 @@
+https://www.nuxtjs.cn/guide/installation
+
+npx create-nuxt-app nuxt-demo
+
+npm install -g create-nuxt-app
+
+
+
+
+
