@@ -5,7 +5,7 @@ monetalexander
 
 
 
-urgent java django flask   fastapi   golang   vue nuxt next  react  nest mern full stack
+urgent java django flask    golang   vue nuxt next  react  nest mern full stack
 
 
 I am a seasoned Java backend developer,  I once developed a game.  I think I am qualified for this job.
