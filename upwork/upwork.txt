@@ -8,11 +8,14 @@ monetalexander
 urgent java django flask    golang   vue nuxt next  react  nest mern full stack
 
 
-I am a seasoned Java backend developer,  I once developed a game.  I think I am qualified for this job.
+I am a seasoned Next.js full-stack developer,  I am also very good at CSS and Tailwind.  
+I think I am qualified for this job.
 
 
 
+https://github.com/2547409617
 
+Vue.js Nuxt.js TypeScript Axios Pinia Tailwind SCSS Vite Websocket
 
 
 

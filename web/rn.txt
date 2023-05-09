@@ -1,0 +1,102 @@
+https://github.com/jiangleo/react-native-classroom.git
+
+mac 12.6.3
+
+https://reactnative.dev/docs/next/environment-setup
+React Native 0.71 版
+
+
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+
+source /Users/quanlie/.bash_profile
+
+brew --version
+
+npm install -g npm
+
+npx nrm use taobao
+
+node --version
+npm --version
+
+brew install ipython
+
+brew install watchman
+
+watchman --version
+
+ruby --version
+
+系统自带的 Ruby 是 2.6.10 版本，而 React Native 0.71 所依赖的 Ruby 版本是 2.7.6。因此，我们需要使用 rbenv 将 Ruby 版本切换到 2.7.6。
+
+
+brew install rbenv ruby-build 
+
+rbenv init
+
+
+rbenv install 2.7.6
+rbenv global 2.7.6
+
+
+~/.bashrc
+eval "$(rbenv init - bash)"
+
+ruby --version
+
+
+
+gem sources --add https://gems.ruby-china.com/ --remove https://rubygems.org/
+gem sources -l
+https://gems.ruby-china.com
+
+bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+
+sudo gem install cocoapods
+
+
+pod --version
+1.11.3
+
+
+cd ~/.cocoapods/repos 
+pod repo remove master
+git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master
+
+
+https://reactnative.dev/docs/next/environment-setup?guide=native
+Installing an iOS Simulator in Xcode
+To install a simulator, open Xcode > Preferences... and select the Components tab. Select a simulator with the corresponding version of iOS you wish to use.
+
+npx react-native init rndemo
+
+执行完上述命令后，进入 rndemo/ios 目录，找到 Podfile 文件，在文件第一行添加：
+
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+platform :ios, '11.0'
+
+
+package.json
+ "react": "17.0.2",
+ "react-test-renderer": "17.0.2",
+
+这时，再在 rndemo/ios 目录下，运行 CocoaPods 安装命令即可。
+
+bundle exec pod install
+
+
+~/.cocoapods/repos/master
+
+将 GitHub 地址替换成 Gitee 地址
+
+解决方案是，我们可以把所有的 GitHub 地址替换成 Gitee 地址
+
+pod install
+
+
+npx react-native run-ios
+
+
+
+
