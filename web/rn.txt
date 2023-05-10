@@ -74,12 +74,15 @@ npx react-native init rndemo
 
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
-platform :ios, '11.0'
+platform :ios, '13.0'
 
 
 package.json
  "react": "17.0.2",
  "react-test-renderer": "17.0.2",
+
+
+ dns: 8.8.8.8
 
 这时，再在 rndemo/ios 目录下，运行 CocoaPods 安装命令即可。
 
@@ -96,6 +99,77 @@ pod install
 
 
 npx react-native run-ios
+
+
+
+
+android:
+https://openjdk.org/install/
+https://jdk.java.net/archive/
+
+jdk16.02
+
+java -version
+javac -version
+
+
+https://developer.android.google.cn/?hl=zh-cn
+
+
+
+auto detect proxy
+腾讯： https://mirrors.cloud.tencent.com/AndroidSDK/
+
+阿里： https://mirrors.aliyun.com/android.googlesource.com/
+
+
+Android SDK Platform 33
+
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
+npx react-native@latest init rnandroiddemo
+
+build.gradle
+
+阿里：https://maven.aliyun.com/repository/public/
+华为：https://repo.huaweicloud.com/repository/maven/
+
+
+repositories {
+        maven { url "https://maven.aliyun.com/repository/public/"}
+        maven { url "https://repo.huaweicloud.com/repository/maven/"}
+        // google()
+        // mavenCentral()
+
+
+
+$ cd android
+$ ./gradlew build --refresh-dependencies
+
+# 如果在 Android 目录，需要 cd ../ 到根目录
+$ npx react-native start
+
+npx react-native run-android
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

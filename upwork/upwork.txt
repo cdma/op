@@ -5,7 +5,7 @@ monetalexander
 
 
 
-urgent java django flask    golang   vue nuxt next  react  nest mern full stack
+ golang websocket java scrap  vue nuxt  nest 
 
 
 I am a seasoned Next.js full-stack developer,  I am also very good at CSS and Tailwind.  
