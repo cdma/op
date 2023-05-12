@@ -52,7 +52,10 @@ https://gems.ruby-china.com
 
 bundle config mirror.https://rubygems.org https://gems.ruby-china.com
 
+# before 10.11
 sudo gem install cocoapods
+# later
+sudo gem install -n /usr/local/bin  cocoapods
 
 
 pod --version
@@ -146,9 +149,7 @@ repositories {
         // mavenCentral()
 
 
-
-$ cd android
-$ ./gradlew build --refresh-dependencies
+npm install
 
 # 如果在 Android 目录，需要 cd ../ 到根目录
 $ npx react-native start

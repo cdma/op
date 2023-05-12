@@ -23,3 +23,11 @@ git config --global --unset https.https://github.com.proxy
 //取消全局代理
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+
+
+git init
+git st
+git add .
+ git commit -am"comment"
+
+ git co -b branch

@@ -1,25 +1,42 @@
-monetalexander
 
 
+ golang websocket  vue nuxt   centos ubuntu react next
 
+Software Engineer, System Admin
 
-
-
- golang websocket java scrap  vue nuxt  nest 
-
-
-I am a seasoned Next.js full-stack developer,  I am also very good at CSS and Tailwind.  
+I am a seasoned Vue/Nuxt.js full-stack developer,  I am also very good at CSS and Tailwind.  
 I think I am qualified for this job.
 
+I am a seasoned React/Next.js full-stack developer,  I am also very good at CSS and Tailwind.  
+I think I am qualified for this job.
+
+I am a seasoned Golang developer,  I am also very good at Database and Cache.  
+I think I am qualified for this job.
+
+I am a seasoned System Admin,  I am also very good at troubleshooting and performance optimization.  
+I think I am qualified for this job.
+
+I am a seasoned Scraping developer,  I am also very good at  large scale data processing .
+I think I am qualified for this job.
 
 
 https://github.com/2547409617
 
-Vue.js Nuxt.js TypeScript Axios Pinia Tailwind SCSS Vite Websocket
+vue:
+https://juejin.cn/
 
 
+Skills 
+Vue.js
+Java
+Scrapy
+React Native
+React
+Golang
+System Administration
 
-I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，Typescript，Java，Golang and PHP. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
+
+I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，Typescript，Java，Golang and Linux. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
 
 
 
