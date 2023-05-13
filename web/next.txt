@@ -1,0 +1,7 @@
+next.txt
+npm i next-redux-wrapper --save
+
+npm i @reduxjs/toolkit react-redux --save
+
+npm i axios@1.1.3 --save
+

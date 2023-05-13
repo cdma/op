@@ -1,6 +1,6 @@
 
 
- golang websocket  vue nuxt   centos ubuntu react next
+ golang websocket  vue nuxt   centos ubuntu react next web3
 
 Software Engineer, System Admin
 
@@ -27,17 +27,21 @@ https://juejin.cn/
 
 
 Skills 
-Vue.js
-Java
-Scrapy
-React Native
-React
-Golang
+Vue.js Java Scrapy React Native React Golang
 System Administration
 
 
 I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，Typescript，Java，Golang and Linux. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
 
+I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, Vue.js/Nuxt.js , Node.js/Nest.js，Typescript，Golang and Linux. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
+
+EllenAlexander 9
+
+BunnyAlexander 1
+
+FoilAlexander fail
+
+MelodyAlexander fail
 
 
 
