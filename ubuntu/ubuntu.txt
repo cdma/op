@@ -1,0 +1,6 @@
+/etc/apt/sources.list
+
+apt-get update
+
+apt-get install libmysqlclient-dev
+
