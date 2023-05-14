@@ -77,19 +77,19 @@ npx react-native init rndemo
 
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
-platform :ios, '13.0'
+# platform :ios, '13.0'
 
 
-package.json
- "react": "17.0.2",
- "react-test-renderer": "17.0.2",
+# package.json
+# "react": "17.0.2",
+# "react-test-renderer": "17.0.2",
 
 
  dns: 8.8.8.8
 
 这时，再在 rndemo/ios 目录下，运行 CocoaPods 安装命令即可。
 
-bundle exec pod install
+# bundle exec pod install
 
 
 ~/.cocoapods/repos/master
@@ -150,6 +150,10 @@ repositories {
 
 
 npm install
+
+
+cd android
+./gradlew build --refresh-dependencies
 
 # 如果在 Android 目录，需要 cd ../ 到根目录
 $ npx react-native start

@@ -19,3 +19,12 @@ npm run dev
 
 npm run build
 
+npm i pinia
+
+
+index.html -> index.ejs
+
+node_modules/webpack/bin/webpack.js
+html: {template: './public/index/ejs'}
+
+

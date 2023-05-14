@@ -12,14 +12,17 @@ repositories {
         // mavenCentral()
     }
 
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+
 
 
 
 https://reactnavigation.org/docs/getting-started
 
-npm install @react-navigation/native  --legacy-peer-deps
+npm install @react-navigation/native 
 
-npm install react-native-screens react-native-safe-area-context --legacy-peer-deps
+npm install react-native-screens react-native-safe-area-context
 
 npx pod-install ios
 

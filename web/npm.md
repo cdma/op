@@ -10,6 +10,10 @@ npm i eslint --save-dev
 
 
 
+npm config get registry
+
+npm config set registry http://registry.npm.taobao.org/
+
 
 Yarn 语法
 
