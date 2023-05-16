@@ -1,8 +1,5 @@
 npx react-native init rndemo
 
-npx react-native run-android
-
-npx react-native run-ios
 
 build.gradle
 repositories {
@@ -13,6 +10,19 @@ repositories {
     }
 
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+
+
+pod install
+
+./gradlew build --refresh-dependencies
+
+./gradlew build
+
+
+
+npx react-native run-android
+
+npx react-native run-ios
 
 
 
@@ -41,4 +51,39 @@ import android.os.Bundle;
 https://reactnavigation.org/docs/hello-react-navigation
 
 npm install @react-navigation/native-stack
+
+
+https://reactnavigation.org/docs/tab-based-navigation
+
+npm install @react-navigation/bottom-tabs
+
+
+https://reactnavigation.org/docs/material-top-tab-navigator
+
+npm install @react-navigation/material-top-tabs react-native-tab-view
+
+npm install react-native-pager-view
+
+npx pod-install ios
+
+https://reactnavigation.org/docs/handling-safe-area/
+
+
+
+
+# npm i react-native-vector-icons --save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

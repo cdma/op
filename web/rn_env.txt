@@ -155,6 +155,8 @@ npm install
 cd android
 ./gradlew build --refresh-dependencies
 
+./gradlew build
+
 # 如果在 Android 目录，需要 cd ../ 到根目录
 $ npx react-native start
 
