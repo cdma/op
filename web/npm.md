@@ -14,6 +14,21 @@ npm config get registry
 
 npm config set registry http://registry.npm.taobao.org/
 
+npm config set registry http://registry.npm.org/
+
+npm config set registry http://registry.cnpmjs.org
+
+
+npm cache clean --force
+
+npm config get proxy
+
+npm config get https-proxy
+
+npm config delete proxy
+
+
+
 
 Yarn 语法
 

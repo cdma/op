@@ -20,6 +20,12 @@ I am a seasoned Scraping developer,  I am also very good at  large scale data pr
 I think I am qualified for this job.
 
 
+
+mqttx conn -h '52.62.143.188' -p 1883 -u 'arnold' -P 'arnold'
+
+mqttx sub -t 'device/69986F29/realtime' -h '52.62.143.188' -p 1883
+
+
 https://github.com/2547409617
 
 vue:
@@ -31,9 +37,11 @@ Vue.js Java Scrapy React Native React Golang chatgpt
 System Administration
 
 
-I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，chatgpt，Java，Golang and Linux. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
+I’m a seasoned developer in building websites and soluting complexed bussness. Whether you’re trying to win work, list your services or even create a whole online store – I can help! I’m experienced in HTML and CSS3, jQuery, React/Next.js, Vue.js/Nuxt.js , Node.js/Nest.js，Rust，Java，Golang and Linux. I’ll fully project manage your brief from start to finish Regular communication is really important to me, so let’s keep in touch!”
 
-DramaAlexander
+BocheerAlexander
+
+DramaAlexander 1
 
 ForeverAlexander  1
 
@@ -45,8 +53,6 @@ EllenAlexander 1
 
 BunnyAlexander 1
 
-
-MelodyAlexander fail
 
 
 

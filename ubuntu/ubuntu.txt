@@ -4,3 +4,47 @@ apt-get update
 
 apt-get install libmysqlclient-dev
 
+
+systemctl start docker
+
+usermod -aG docker
+
+
+ systemctl list-units postgresql\*
+
+
+systemctl stop postgresql
+
+systemctl status postgresql
+
+
+systemctl start postgresql
+
+systemctl daemon-reload
+
+
+apt-get purge postgresql
+
+apt-get purge postgresql-12
+
+apt-get install postgresql
+
+sudo apt autoremove
+
+sudo su postgres
+
+psql -U postgres
+
+
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-20-04
+
+sudo apt install postgresql postgresql-contrib
+
+sudo systemctl start postgresql.service
+
+sudo -i -u postgres
+
+
+

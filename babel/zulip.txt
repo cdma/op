@@ -1,0 +1,22 @@
+https://zulip.readthedocs.io/en/latest/development/setup-recommended.html#step-2-get-zulip-code
+https://zulip.readthedocs.io/en/latest/development/setup-advanced.html#installing-directly-on-ubuntu-debian-centos-or-fedora
+
+http://www.codebaoku.com/it-mysql/it-mysql-265729.html
+
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+
+apt update
+
+
+
+./tools/provision
+source /srv/zulip-py3-venv/bin/activate
+./tools/run-dev  # starts the development server
+
+
+
+
+
+https://github.com/zulip/zulip-mobile/blob/main/docs/howto/build-run.md
+
+yarn install

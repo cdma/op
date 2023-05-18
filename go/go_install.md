@@ -16,6 +16,8 @@ export GOPROXY=https://goproxy.cn
 
 https://www.geeksforgeeks.org/how-to-install-golang-on-centos-7/
 
+https://docs.studygolang.com/doc/install
+
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz
 
 export PATH=$PATH:/usr/local/go/bin

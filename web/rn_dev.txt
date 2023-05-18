@@ -5,8 +5,8 @@ build.gradle
 repositories {
         maven { url "https://maven.aliyun.com/repository/public/"}
         maven { url "https://repo.huaweicloud.com/repository/maven/"}
-        // google()
-        // mavenCentral()
+        google()
+        mavenCentral()
     }
 
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
@@ -17,7 +17,6 @@ pod install
 ./gradlew build --refresh-dependencies
 
 ./gradlew build
-
 
 
 npx react-native run-android
@@ -72,6 +71,61 @@ https://reactnavigation.org/docs/handling-safe-area/
 
 
 # npm i react-native-vector-icons --save
+
+
+npm i recyclerlistview --save
+
+npm i react-query --save
+
+npm i axios --save
+
+
+
+
+https://github.com/GetStream/react-native-samples/tree/main/projects/SlackClone
+
+
+yarn create-channels --config="test-data-cli.config.js"
+
+
+─────────────────────────────┐
+│ (index) │ STREAM_USER_ID │                                                STREAM_USER_TOKEN                                                │
+├─────────┼────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│    0    │    'vishal'    │ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidmlzaGFsIn0.G7Cm2MSR4ItUiXPUn9dMZqTHvoNK1PMEE4auNufnptM'  │
+│    1    │    'lucas'     │  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoibHVjYXMifQ.JkrhW7E_eTGwySBECpBLkJraakbm_UGRF4zBnpx5TOw'  │
+│    2    │   'tommaso'    │ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidG9tbWFzbyJ9.brtDgn0GZmBdZWYzYLnFq2Tg3nU3VvwzBSceicbQYAw' │
+│    3    │     'neil'     │   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoibmVpbCJ9.N_PCWINnHAvF9X712fIkgcDLh2BoUUKzzLDzuRyM3kE'   │
+│    4    │     'nick'     │   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoibmljayJ9.q4H_6I8dYF4BTBYKRCLBjB6xQ7OEATSZc8Vd_WdG-pE'   │
+│    5    │   'thierry'    │ 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoidGhpZXJyeSJ9.Q4NDXyJCPRXguJ2eCWymqEcCzNRE_WnD43GktPDo8LU' │
+│    6    │     'ben'      │   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmVuIn0.Kh54Wqf97gSsu022gAaUJbTYvQn27EBDOy1QU-zxoo8'    │
+└─────────┴────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/2547409617/react-native-gifted-chat
+
+npm install react-native-gifted-chat --save
+
+npm i emoji-utils --save-dev 
+
+
+
+
+
+
+
 
 
 

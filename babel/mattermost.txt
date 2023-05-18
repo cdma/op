@@ -1,0 +1,29 @@
+https://developers.mattermost.com/contribute/developer-setup/
+
+make run-server
+
+curl http://localhost:8065/api/v4/system/ping
+
+
+make run
+
+make stop-server
+
+make stop-docker
+
+
+
+
+
+https://developers.mattermost.com/contribute/more-info/mobile/developer-setup/
+
+rm -rf node_modules
+
+npm install
+
+gem install bundler
+
+gem install rails
+
+
+
