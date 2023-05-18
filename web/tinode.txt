@@ -4,8 +4,8 @@ $GOPATH/bin/server -config=./tinode.conf -static_data=$HOME/tinode/webapp/
 
 $GOPATH/bin/tinode-db -config=./tinode.conf 
 
+./server -config=./tinode.conf -static_data=$HOME/tinode/webapp/
 
-go get github.com/tinode/chat/server/db/mysql/adapter
 
 
 topic.run

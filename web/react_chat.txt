@@ -7,4 +7,6 @@ https://github.com/antoine92190/vue-advanced-chat-sandbox
 
 https://github.com/antoine92190/vue-advanced-chat
 
+https://github.com/alibaba/ChatUI
+
 
