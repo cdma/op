@@ -79,7 +79,7 @@ export abstract class BaseDataProvider {
 
     public getDataForIndex(index: number): any {
         this.fireBottomEvent(index)
-        return this._data[index + this.startIndex];
+        return this._data[index - this.startIndex];
     }
 
     public getAllData(): any[] {
@@ -117,7 +117,7 @@ export abstract class BaseDataProvider {
         const iterCount = Math.min(this._size, newSize);
         if (ObjectUtil.isNullOrUndefined(firstModifiedIndex)) {
             let i = 0;
-            for (i = 0 + this.startIndex; i < iterCount; i++) {
+            for (i = 0 + this.startIndex; i < this.startIndex + iterCount; i++) {
                 if (this.rowHasChanged(this._data[i], newData[i])) {
                     break;
                 }
@@ -132,19 +132,19 @@ export abstract class BaseDataProvider {
 
         
         
-        dp.endIndex = dp.startIndex + newData.length
-        let originData = dp._data
+        dp.endIndex += newData.length
+        let originData = [...this._data]
 
         if (append && dp.endIndex-dp.startIndex > 2*unit) {
             dp.startIndex += unit
-            originData = dp._data.slice(unit)
+            originData = originData.slice(unit)
         }
         newData = originData.concat(newData)
         console.log('cloneWithRows endIndex: ', dp.endIndex,
                 ', start: ', dp.startIndex, ', data: ', newData)
 
         dp._data = newData;
-        dp._size = newSize;
+        dp._size = dp.endIndex;
         return dp;
     }
 }
