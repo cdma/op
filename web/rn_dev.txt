@@ -18,12 +18,17 @@ pod install
 
 ./gradlew build
 
+./gradlew clean
+
 
 npx react-native run-android
 
 npx react-native run-ios
 
 
+https://juejin.cn/post/7164277376715587620
+react-native 找不到符号问题的解决方案及溯源
+https://github.com/facebook/react-native/releases/tag/v0.71.8
 
 
 
@@ -91,6 +96,14 @@ npm i react-query --save
 
 npm i axios --save
 
+npm install @reduxjs/toolkit  --save
+
+# 需要signed
+# npm i @sentry/react-native --save
+
+# npm uninstall @sentry/react-native --save
+
+
 
 https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/installation/
 
@@ -133,18 +146,35 @@ yarn create-channels --config="test-data-cli.config.js"
 
 
 
-
-
-
-
-
-
 https://github.com/2547409617/react-native-gifted-chat
 
 npm install react-native-gifted-chat --save
 
 npm i emoji-utils --save-dev 
 
+
+
+
+npm i react-native-vector-icons --save
+
+npm i react-native-gesture-handler --save
+
+npm i react-navigation-redux-helpers redux-thunk redux-logger --save
+
+npm i graphql graphql-tag --save
+
+
+
+
+
+
+
+
+
+
+_renderRowUsingMeta
+
+dataProvider.getDataForIndex
 
 
 
