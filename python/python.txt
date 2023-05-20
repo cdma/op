@@ -1,0 +1,2 @@
+python.txt
+python -m SimpleHTTPServer 8000

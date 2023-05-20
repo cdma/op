@@ -18,10 +18,57 @@ npm uninstall react react-dom
 
 npm install react@17.0.2 react-dom@17.0.2  --save --legacy-peer-deps
 
+npm i @craco/craco@alpha -D --save
 
 
 
+npm install  react-redux  redux  redux-thunk react-navigation --save
 
+
+craco.config.js
+const path = require('path')
+const CracoLessPlugin = require('craco-less')
+
+const resolve = (dir) => path.resolve(__dirname, dir)
+
+module.exports = {
+  plugins: [
+    {
+      plugin: CracoLessPlugin,
+      options: {
+        lessLoaderOptions: {
+          lessOptions: {
+            // modifyVars: { '@primary-color': '#1DA57A' },
+            javascriptEnabled: true
+          }
+        }
+      }
+    }
+  ],
+  webpack: {
+    alias: {
+      '@': resolve('src'),
+      components: resolve('src/components')
+    }
+  }
+}
+
+
+
+tsconfig.json
+"baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+
+package.json
+ "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write ."
+  },
 
 
 

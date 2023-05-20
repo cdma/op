@@ -1,0 +1,30 @@
+go install -tags mysql github.com/tinode/chat/server@latest
+
+$GOPATH/bin/server -config=./tinode.conf -static_data=$HOME/tinode/webapp/
+
+$GOPATH/bin/tinode-db -config=./tinode.conf 
+
+./server -config=./tinode.conf -static_data=$HOME/tinode/webapp/
+
+
+
+topic.run
+
+runLocal
+
+handleClientMsg
+
+handlePubBroadcast
+
+if t.isReadOnly() {
+	msg.sess.queueOut
+}
+
+saveAndBroadcastMessage
+
+store.Messages.Save {
+
+TopicUpdateOnMessage
+
+MessageSave
+}

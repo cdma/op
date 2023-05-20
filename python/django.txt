@@ -1,0 +1,41 @@
+django.txt
+
+apt-get install libmysqlclient-dev
+
+pip3 install -r requirements.txt
+
+python3 manage.py runserver
+
+apt-get install python3.10
+
+apt-get install python3.10-dev
+
+ update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+
+ apt install python3-pip
+
+  pip3 install --upgrade pip
+
+   apt-get install python3.10-distutils
+
+
+
+ls /usr/bin/python3*
+
+apt-get --purge remove python3.8
+
+apt autoremove
+
+
+wget https://www.python.org/ftp/python/3.10.7/Python-3.10.7.tgz 
+
+tar -zvxf Python-3.10.7.tgz
+
+ ./configure --prefix=/usr/local/python3.10.7 --enable-optimizations
+
+ make && make install
+
+  update-alternatives --install /usr/bin/python3 python3 /usr/local/python3.10.7/bin/python3.10 1
+
+  update-alternatives --install /usr/bin/pip3 pip3 /usr/local/python3.10.7/bin/pip3.10 1
+

@@ -1,0 +1,14 @@
+https://mui.com/
+
+npm install @mui/material @emotion/react @emotion/styled
+
+
+
+https://github.com/mui/material-ui/tree/master/examples/material-cra
+
+
+curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/material-cra
+cd material-cra
+npm install
+npm start
+

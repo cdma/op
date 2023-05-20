@@ -6,5 +6,9 @@ npm install -g create-nuxt-app
 
 
 
+npm install normalize.css --save
+
+npm install sass --save-dev
+
 
 
