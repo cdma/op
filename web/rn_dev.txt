@@ -49,9 +49,9 @@ end
 
 https://reactnavigation.org/docs/getting-started
 
-npm install @react-navigation/native 
+npm install @react-navigation/native --save
 
-npm install react-native-screens react-native-safe-area-context
+npm install react-native-screens react-native-safe-area-context --save
 
 npx pod-install ios
 
@@ -69,19 +69,19 @@ import android.os.Bundle;
 
 https://reactnavigation.org/docs/hello-react-navigation
 
-npm install @react-navigation/native-stack
+npm install @react-navigation/native-stack --save
 
 
 https://reactnavigation.org/docs/tab-based-navigation
 
-npm install @react-navigation/bottom-tabs
+npm install @react-navigation/bottom-tabs --save
 
 
 https://reactnavigation.org/docs/material-top-tab-navigator
 
-npm install @react-navigation/material-top-tabs react-native-tab-view
+npm install @react-navigation/material-top-tabs react-native-tab-view --save
 
-npm install react-native-pager-view
+npm install react-native-pager-view --save
 
 npx pod-install ios
 
@@ -152,6 +152,9 @@ npm install react-native-gifted-chat --save
 
 npm i emoji-utils --save-dev 
 
+# npm i react-native-gesture-handler --save
+
+
 
 
 
@@ -166,11 +169,11 @@ npm i graphql graphql-tag --save
 
 
 
+renderCompat
 
+ScrollComponent
 
-
-
-
+_generateRenderStack
 
 _renderRowUsingMeta
 

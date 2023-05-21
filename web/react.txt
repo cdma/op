@@ -1,22 +1,22 @@
 https://react.dev/learn/start-a-new-react-project
 
 
-npx create-next-app
+#npx create-next-app
 
- npm install create-react-app
+# npm install create-react-app
 
-npm create-react-app react-demo
+npx create-react-app react-ts-template
 
-npx create-react-app@17.02 react17-demo
+# npx create-react-app@17.02 react17-demo
 
 npx create-react-app react-ts-chat-demo --template typescript
 
 
-npm install react@17.0.2 react-dom@17.0.2 
+# npm install react@17.0.2 react-dom@17.0.2 
 
-npm uninstall react react-dom
+# npm uninstall react react-dom
 
-npm install react@17.0.2 react-dom@17.0.2  --save --legacy-peer-deps
+# npm install react@17.0.2 react-dom@17.0.2  --save --legacy-peer-deps
 
 npm i @craco/craco@alpha -D --save
 
