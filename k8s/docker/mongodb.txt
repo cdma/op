@@ -1,0 +1,51 @@
+mongodb.txt
+https://www.runoob.com/docker/docker-install-mongodb.html
+
+docker run -itd --name mongo -p 27017:27017 mongo
+
+docker exec -it mongo mongosh
+
+use admin
+
+db.createUser({ user:'admin',pwd:'123456',roles:[ { role:'userAdminAnyDatabase', db: 'admin'},"readWriteAnyDatabase"]});
+
+
+
+
+
+https://www.runoob.com/mongodb/mongodb-tutorial.html
+
+show dbs
+
+db.test.insertOne({"name":"菜鸟教程"})
+
+use test
+
+db.createCollection("profile")
+
+show collections
+
+db.profile.insert({title: 'MongoDB 教程', 
+    description: 'MongoDB 是一个 Nosql 数据库',
+    by: '菜鸟教程',
+    url: 'http://www.runoob.com',
+    tags: ['mongodb', 'database', 'NoSQL'],
+    likes: 100
+})
+
+db.profile.find()
+
+
+
+
+
+
+db.getCollection("DownLog").find({"ip":"115.231.218.203", "status": {"$ne": 3}, "date": {"$gte":ISODate("2019-05-23 09:04:53")}}).sort({"date":-1})
+
+db.getCollection("DownLog").aggregate([{"$match": {"date": {"$gte":ISODate("2019-05-26 03:13:53")}, "status": {"$ne": 3}}},
+    {"$project": {"ip": 1, "_id": 0}},
+    {"$group": {"_id": "$ip", "count": {"$sum": 1}}},
+    {"$sort": {"count": -1}},
+    {"$limit":10}
+    ])
+

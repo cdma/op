@@ -5,3 +5,8 @@ npm i @reduxjs/toolkit react-redux --save
 
 npm i axios@1.1.3 --save
 
+https://www.mongodb.com/compatibility/using-typescript-with-mongodb-tutorial
+npm install mongodb --save
+
+npm i dotenv --save
+
